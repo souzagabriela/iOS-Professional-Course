@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         safeWindow.frame = UIScreen.main.bounds
         safeWindow.makeKeyAndVisible()
         safeWindow.backgroundColor = .white
-        safeWindow.rootViewController = OnboardingViewController()
+        safeWindow.rootViewController = OnboardingContainerViewController()
         
         self.window = safeWindow
     }

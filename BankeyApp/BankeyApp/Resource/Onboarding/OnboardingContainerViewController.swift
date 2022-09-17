@@ -19,9 +19,9 @@ class OnboardingContainerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        let page1 = OnboardingViewController(useImageName: "Rocket", titleText: "We create something new you have never seen before. It's fast and easier to use. Bankey your life.", bankeyTitleText: "Bankey")
+        let page2 = OnboardingViewController(useImageName: "Money", titleText: "Make investment choices based on verified data", bankeyTitleText: "Investments")
+        let page3 = OnboardingViewController(useImageName: "RocketFlying", titleText: "High your money up with Bankey", bankeyTitleText: "Enjoy for more")
         
         pages.append(page1)
         pages.append(page2)
@@ -39,8 +39,7 @@ class OnboardingContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .lightGray
-        
+        view.backgroundColor = UIColor(named: "background")
         /*
          How to add child view controllers: 3 steps
          1: take the child we wanto to add
@@ -97,27 +96,5 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return pages.firstIndex(of: self.currentVC) ?? 0
-    }
-}
-
-// MARK: - ViewControllers
-class ViewController1: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemRed
-    }
-}
-
-class ViewController2: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGreen
-    }
-}
-
-class ViewController3: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
     }
 }

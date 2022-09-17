@@ -13,11 +13,28 @@ class OnboardingViewController: UIViewController {
     let titleLabel = UILabel()
     let label = UILabel()
     
+    let useImageName: String
+    let bankeyTitleText: String
+    let titleText: String
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "background")
         style()
         layout()
+    }
+    
+    init(useImageName: String, titleText: String, bankeyTitleText: String) {
+        self.useImageName = useImageName
+        self.titleText = titleText
+        self.bankeyTitleText = bankeyTitleText
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -29,21 +46,22 @@ extension OnboardingViewController {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "Rocket")
+        imageView.image = UIImage(named: useImageName)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
         titleLabel.adjustsFontForContentSizeCategory = true
-        titleLabel.text = "Bankey"
+        titleLabel.text = bankeyTitleText
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = "We create something new you have never seen before. It's fast and easier to use. Bankey your life."
+        label.text = titleText
     }
+    // "We create something new you have never seen before. It's fast and easier to use. Bankey your life."
     
     func layout() {
         stackView.addArrangedSubview(imageView)
