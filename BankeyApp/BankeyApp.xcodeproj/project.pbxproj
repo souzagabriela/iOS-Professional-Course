@@ -14,6 +14,7 @@
 		53BAB37C28D3E765007E8AFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BAB37B28D3E765007E8AFF /* SceneDelegate.swift */; };
 		53BAB38328D3E765007E8AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BAB38228D3E765007E8AFF /* Assets.xcassets */; };
 		53BAB38628D3E765007E8AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BAB38428D3E765007E8AFF /* LaunchScreen.storyboard */; };
+		53F99CB628D661180075B00E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F99CB528D661180075B00E /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		53BAB38228D3E765007E8AFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53BAB38528D3E765007E8AFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53BAB38728D3E765007E8AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F99CB528D661180075B00E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				53A4CDCF28D6191A0068934F /* OnboardingContainerViewController.swift */,
+				53F99CB528D661180075B00E /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539142B128D60B7600BB625D /* LoginViewController.swift in Sources */,
+				53F99CB628D661180075B00E /* OnboardingViewController.swift in Sources */,
 				53BAB37A28D3E765007E8AFF /* AppDelegate.swift in Sources */,
 				539142B428D60F3B00BB625D /* LoginView.swift in Sources */,
 				53A4CDD028D6191A0068934F /* OnboardingContainerViewController.swift in Sources */,
